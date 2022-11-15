@@ -77,9 +77,9 @@
                 <div class="col-md-3"> 
                   <div class="form-group">
                     <label for="fecha">Fecha de Publicación</label>
-                    <input type="text" class="form-control" name="fecha" id="fecha" th:field="*{fecha}" placeholder="Fecha de publicacion" required="required">
-                    <small class="form.text text-danger" th:if"${#fields.hasErrors('fecha')}" th:errors="*{fecha}"></small>
-                  </div>  
+                    <input type="date"th:if="${vacante.fecha != null}" th:field="*{fecha}" class="form-control" name="fecha" id="fechaa" placeholder="Fecha de publicacion" required="required">
+                    <input type="date"th:unless="${vacante.fecha != null}" class="form-control" name="fecha" id="fechaa" placeholder="Fecha de publicacion" required="required">
+                  </div> 
                 </div>
                 <div class="col-md-3"> 
                   <div class="form-check">
